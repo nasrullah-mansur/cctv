@@ -3,6 +3,10 @@
     .testimonial-slide {
         margin: 0 -15px;
 
+        @media (max-width: 575px) {
+            margin: auto;
+        }
+
         .col {
             padding: 0 15px;
         }

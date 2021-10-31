@@ -16,11 +16,11 @@ $(document).ready(function() {
         top: topHeaderHeight
     });
 
-    console.log(topHeaderHeight);
+    $(window).on('load', function() {
+        $('.preloader').fadeOut();
+    });
     
-    $(window).on('scroll', function() {
-        console.log('ok');
-        
+    $(window).on('scroll', function() {        
         let scrollTop = $(this).scrollTop();
         if(scrollTop > topHeaderHeight) {
             $('.header .main-nav').addClass('fixed-top');
@@ -124,4 +124,27 @@ $(document).ready(function() {
         $('.service-page .right-side .content ul li').prepend('<i class="las la-check-circle"></i>')
     }
 
+
+    // form validation;
+    if($('.contact-form').length > 0) {
+        let submitBtn = $('.contact-form button');
+        let inputs = $('.contact-form input, .contact-form textarea');
+
+        submitBtn.on('click', function(e) {            
+            Array.from(inputs).forEach(function(data) {
+                console.log(data);
+                let dataVal = data.value;
+
+                if(dataVal == '') {
+                    data.classList.add('is-invalid');
+                    e.preventDefault();
+                } 
+            })
+        });
+
+        inputs.on('keyup', function() {
+            $(this).removeClass('is-invalid');
+        })
+        
+    }
 });

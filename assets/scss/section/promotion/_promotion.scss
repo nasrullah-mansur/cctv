@@ -8,6 +8,10 @@
         .col {
             padding: 0 15px;
         }
+
+        @media (max-width: 575px) {
+            margin: auto;
+        }
     }
 
     [class^="col"] {

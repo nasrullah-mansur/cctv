@@ -207,12 +207,22 @@
                     padding-left: 25px;
                     color: $black;
                     font-weight: 500;
+                    padding-right: 15px;
+                    box-sizing: border-box;
 
                     i {
                         position: absolute;
                         top: 5px;
                         left: 0;
                         color: $secondary-color;
+                    }
+                }
+
+                @media (max-width: 767.98px) {
+                    flex-direction: column;
+
+                    li {
+                        width: 100%;
                     }
                 }
             }

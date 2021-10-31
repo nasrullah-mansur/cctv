@@ -17,10 +17,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-body {
-  overflow-x: hidden !important;
-}
-
 h1,
 h2,
 h3,
@@ -254,6 +250,29 @@ a.custom-btn.style-two {
 .back-to-top i {
   font-size: 22px;
   color: #ffffff;
+}
+
+.preloader {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: #ffffff;
+  top: 0;
+  left: 0;
+  z-index: 999999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.preloader img {
+  max-width: 60px;
 }
 
 .header {
@@ -589,6 +608,12 @@ a.custom-btn.style-two {
   margin: 0 -15px;
 }
 
+@media (max-width: 575px) {
+  .testimonial .testimonial-slide {
+    margin: auto;
+  }
+}
+
 .testimonial .testimonial-slide .col {
   padding: 0 15px;
 }
@@ -792,10 +817,17 @@ a.custom-btn.style-two {
   width: calc(50% - 10px);
   margin-bottom: 20px;
   height: 54px;
+  border: 0;
   border-radius: 5px;
   padding: 10px 15px;
-  border: 0;
   background-color: #ffffff;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.contact .form .input-items input.is-invalid {
+  border-color: #de3723;
+  background-color: rgba(222, 54, 35, 0.35);
 }
 
 @media (max-width: 767.98px) {
@@ -812,6 +844,12 @@ a.custom-btn.style-two {
   width: 100%;
   height: 150px;
   margin-bottom: 20px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.contact .form textarea.is-invalid {
+  background-color: rgba(222, 54, 35, 0.35);
 }
 
 .contact .form button {
@@ -846,6 +884,12 @@ a.custom-btn.style-two {
 
 .current-promotion .slider .col {
   padding: 0 15px;
+}
+
+@media (max-width: 575px) {
+  .current-promotion .slider {
+    margin: auto;
+  }
 }
 
 .current-promotion [class^="col"] {
@@ -1433,7 +1477,7 @@ a.custom-btn.style-two {
   background-color: #F9F9F9;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  padding: 30px;
+  padding: 10px 20px 20px;
   height: 100%;
 }
 
@@ -1699,6 +1743,9 @@ a.custom-btn.style-two {
   padding-left: 25px;
   color: #000000;
   font-weight: 500;
+  padding-right: 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .service-page .right-side .content ul li i {
@@ -1706,4 +1753,16 @@ a.custom-btn.style-two {
   top: 5px;
   left: 0;
   color: #01aa07;
+}
+
+@media (max-width: 767.98px) {
+  .service-page .right-side .content ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .service-page .right-side .content ul li {
+    width: 100%;
+  }
 }
