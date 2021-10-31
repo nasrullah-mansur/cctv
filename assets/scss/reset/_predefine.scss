@@ -16,7 +16,7 @@ body {
 }
 
 body {
-    overflow-x: hidden;
+    overflow-x: hidden !important;
 }
 
 h1,
@@ -202,6 +202,37 @@ a.custom-btn {
 
     &.style-two {
         background-color: $secondary-color;
+    }
+}
+
+.back-to-top {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $primary-color;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    right: 20px;
+    bottom: 30px;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    transition: $transition;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 9999;
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+        margin-bottom: 0;
+    }
+
+    i {
+        font-size: 22px;
+        color: $white;
     }
 }
 

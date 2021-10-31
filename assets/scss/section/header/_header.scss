@@ -32,93 +32,107 @@
         }
     }
 
-    .nav {
-        padding: 15px 0;
-        justify-content: space-between;
-        align-items: center;
+    .main-nav {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        z-index: 999;
+        background-color: $white;
 
-        .logo {
-            img {
-                max-width: 160px;
-            }
+        &.fixed-top {
+            position: fixed;
+            top: 0 !important;
+            border-bottom: 2px solid $bgOne;
         }
 
-        .mobile-menu {
-            width: 40px;
-            height: 40px;
-            border: 2px solid $secondary-color;
-            border-radius: 3px;
-            display: none;
-            justify-content: center;
+        .nav {
+            padding: 15px 0;
+            justify-content: space-between;
             align-items: center;
-            cursor: pointer;
-            margin-left: auto;
-            transition: $transition;
-
-            i {
-                font-size: 22px;
-                color: $secondary-color;
-                transition: $transition;
-            }
-
-            @media (max-width: 991.98px) {
-                display: flex;
-            }
-
-            &:hover,
-            &.active {
-                background-color: $secondary-color;
-                
-                i {
-                    color: $white;
+    
+            .logo {
+                img {
+                    max-width: 160px;
                 }
             }
-        }
-
-        .list {
-
-            ul {
-                display: flex;
-
-                li {
-
-                    a {
-                        display: inline-block;
-                        padding: 15px 20px;
-                        color: $bColor;
-                        font-weight: 600;
-                        transition: $transition;
-
-                        &:hover {
-                            color: $secondary-color;
-                        }
-                    }
-
-                    &.active {
-                        a {
-                            color: $secondary-color;
-                        }
-                    }
-                }
-            }
-
-            @media (max-width: 991.98px) {
+    
+            .mobile-menu {
+                width: 40px;
+                height: 40px;
+                border: 2px solid $secondary-color;
+                border-radius: 3px;
                 display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background-color: $white;
-                z-index: 999;
-                padding-bottom: 20px;
-                border-top: 1px solid $secondary-color;
-
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                margin-left: auto;
+                transition: $transition;
+    
+                i {
+                    font-size: 22px;
+                    color: $secondary-color;
+                    transition: $transition;
+                }
+    
+                @media (max-width: 991.98px) {
+                    display: flex;
+                }
+    
+                &:hover,
+                &.active {
+                    background-color: $secondary-color;
+                    
+                    i {
+                        color: $white;
+                    }
+                }
+            }
+    
+            .list {
+    
                 ul {
-                    flex-direction: column;
-
+                    display: flex;
+    
                     li {
-                        text-align: center;
-                        border-bottom: 1px dashed $border-color;
+    
+                        a {
+                            display: inline-block;
+                            padding: 15px 20px;
+                            color: $bColor;
+                            font-weight: 600;
+                            transition: $transition;
+    
+                            &:hover {
+                                color: $secondary-color;
+                            }
+                        }
+    
+                        &.active {
+                            a {
+                                color: $secondary-color;
+                            }
+                        }
+                    }
+                }
+    
+                @media (max-width: 991.98px) {
+                    display: none;
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    width: 100%;
+                    background-color: $white;
+                    z-index: 999;
+                    padding-bottom: 20px;
+                    border-top: 1px solid $secondary-color;
+    
+                    ul {
+                        flex-direction: column;
+    
+                        li {
+                            text-align: center;
+                            border-bottom: 1px dashed $border-color;
+                        }
                     }
                 }
             }
