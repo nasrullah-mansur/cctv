@@ -1,0 +1,12 @@
+// Call-to-action
+.call-to-action {
+    padding: 100px 0;
+    background-image: url(../images/serve-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+
+    @media (max-width: 767.98px) {
+        text-align: center;
+    }
+}

@@ -35,6 +35,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 h1,
 h2,
 h3,
@@ -231,6 +235,10 @@ a.custom-btn.style-two {
   background-color: #01aa07;
 }
 
+.header {
+  position: relative;
+}
+
 .header .top {
   background-color: #01477b;
   color: #ffffff;
@@ -248,6 +256,7 @@ a.custom-btn.style-two {
 .header .top ul li {
   margin-right: 15px;
   font-size: 15px;
+  text-align: center;
 }
 
 .header .top ul li i {
@@ -256,6 +265,15 @@ a.custom-btn.style-two {
 
 .header .top ul li a {
   color: #ffffff;
+}
+
+@media (max-width: 575px) {
+  .header .top ul {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+  }
 }
 
 .header .nav {
@@ -270,6 +288,47 @@ a.custom-btn.style-two {
 
 .header .nav .logo img {
   max-width: 160px;
+}
+
+.header .nav .mobile-menu {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #01aa07;
+  border-radius: 3px;
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  margin-left: auto;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.header .nav .mobile-menu i {
+  font-size: 22px;
+  color: #01aa07;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+@media (max-width: 991.98px) {
+  .header .nav .mobile-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.header .nav .mobile-menu:hover, .header .nav .mobile-menu.active {
+  background-color: #01aa07;
+}
+
+.header .nav .mobile-menu:hover i, .header .nav .mobile-menu.active i {
+  color: #ffffff;
 }
 
 .header .nav .list ul {
@@ -295,11 +354,39 @@ a.custom-btn.style-two {
   color: #01aa07;
 }
 
+@media (max-width: 991.98px) {
+  .header .nav .list {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    z-index: 999;
+    padding-bottom: 20px;
+    border-top: 1px solid #01aa07;
+  }
+  .header .nav .list ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .header .nav .list ul li {
+    text-align: center;
+    border-bottom: 1px dashed #EEEFF2;
+  }
+}
+
 .footer {
   padding: 100px 0 30px;
   margin-top: 100px;
   background-color: #01477b;
   color: #ffffff;
+}
+
+.footer [class^="col"] {
+  margin-bottom: 30px;
 }
 
 .footer .logo img {
@@ -328,10 +415,19 @@ a.custom-btn.style-two {
   position: absolute;
   top: 5px;
   left: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .footer ul li a {
   color: #ffffff;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.footer ul li:hover i,
+.footer ul li:hover a {
+  color: #01aa07;
 }
 
 .footer .link ul li {
@@ -339,11 +435,15 @@ a.custom-btn.style-two {
 }
 
 .footer .copyright {
-  border-top: 1px solid #01aa07;
+  border-top: 1px solid rgba(1, 170, 7, 0.4);
 }
 
 .pricing-table {
-  padding: 100px 0;
+  padding: 100px 0 70px;
+}
+
+.pricing-table [class^="col"] {
+  margin-bottom: 30px;
 }
 
 .pricing-table .table-item {
@@ -596,8 +696,24 @@ a.custom-btn.style-two {
   margin-bottom: 0;
 }
 
+@media (max-width: 991.98px) {
+  .faq ul {
+    margin: 0;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .faq ul li {
+    width: 100%;
+    padding: 0;
+  }
+}
+
 .contact {
-  padding: 100px 0;
+  padding: 100px 0 70px;
+}
+
+.contact [class^="col"] {
+  margin-bottom: 30px;
 }
 
 .contact .form {
@@ -640,6 +756,12 @@ a.custom-btn.style-two {
   padding: 10px 15px;
   border: 0;
   background-color: #ffffff;
+}
+
+@media (max-width: 767.98px) {
+  .contact .form .input-items input {
+    width: 100%;
+  }
 }
 
 .contact .form textarea {
@@ -888,6 +1010,18 @@ a.custom-btn.style-two {
   background-color: #01aa07;
 }
 
+@media (max-width: 575px) {
+  .how-serve .links ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .how-serve .links ul li {
+    margin: 0 auto 20px;
+  }
+}
+
 .commercial {
   padding: 100px 0 75px;
 }
@@ -1008,6 +1142,20 @@ a.custom-btn.style-two {
   padding-top: 10px;
 }
 
+.call-to-action {
+  padding: 100px 0;
+  background-image: url(../images/serve-bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+
+@media (max-width: 767.98px) {
+  .call-to-action {
+    text-align: center;
+  }
+}
+
 .banner .banner-item {
   position: relative;
   padding: 100px 0 140px;
@@ -1048,6 +1196,29 @@ a.custom-btn.style-two {
   max-height: 320px;
 }
 
+@media (max-width: 767.98px) {
+  .banner .banner-item h3 {
+    font-size: 42px;
+    line-height: 52px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .banner .banner-item h3 {
+    font-size: 28px;
+    line-height: 38px;
+  }
+  .banner .banner-item ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .banner .banner-item ul li {
+    margin-bottom: 20px;
+  }
+}
+
 .banner .slick-arrow {
   position: absolute;
   width: 45px;
@@ -1075,6 +1246,12 @@ a.custom-btn.style-two {
   border-color: transparent;
   background-color: #01aa07;
   color: #ffffff;
+}
+
+@media (max-width: 575.98px) {
+  .banner .slick-arrow {
+    display: none !important;
+  }
 }
 
 .banner .slick-dots {
@@ -1111,10 +1288,13 @@ a.custom-btn.style-two {
   padding-bottom: 70px;
 }
 
+.how-work [class^="col"] {
+  margin-bottom: 30px;
+}
+
 .how-work .how-work-item {
   position: relative;
   padding: 30px;
-  margin-bottom: 30px;
   border-radius: 10px;
   background-color: #01477b;
   color: #ffffff;
@@ -1201,16 +1381,12 @@ a.custom-btn.style-two {
   margin-bottom: 0;
 }
 
-.call-to-action {
-  padding: 100px 0;
-  background-image: url(../images/serve-bg.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100% 100%;
+.contact-page .address {
+  padding: 100px 0 70px;
 }
 
-.contact-page .address {
-  padding: 100px 0 0;
+.contact-page .address [class^="col"] {
+  margin-bottom: 30px;
 }
 
 .contact-page .address .item {
@@ -1280,6 +1456,54 @@ a.custom-btn.style-two {
   font-weight: 600;
   color: #01aa07;
   margin: 0;
+}
+
+.service-page .left-sidebar .sidebar-item .mobile-toggle {
+  position: relative;
+  display: none;
+}
+
+.service-page .left-sidebar .sidebar-item .mobile-toggle .toggler-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 45px;
+  width: 45px;
+  border: 2px solid #01aa07;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.service-page .left-sidebar .sidebar-item .mobile-toggle .toggler-btn i {
+  font-size: 24px;
+  color: #01aa07;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.service-page .left-sidebar .sidebar-item .mobile-toggle .toggler-btn:hover {
+  background-color: #01aa07;
+}
+
+.service-page .left-sidebar .sidebar-item .mobile-toggle .toggler-btn:hover i {
+  color: #ffffff;
+}
+
+@media (max-width: 991.98px) {
+  .service-page .left-sidebar .sidebar-item .mobile-toggle {
+    display: block;
+  }
 }
 
 .service-page .left-sidebar .sidebar-item .title {
@@ -1405,6 +1629,12 @@ a.custom-btn.style-two {
 .service-page .left-sidebar .sidebar-item.technician a:hover {
   background-color: #01aa07;
   color: #ffffff;
+}
+
+@media (max-width: 991.98px) {
+  .service-page .left-sidebar .sidebar-item.has-toggler .toggler-content {
+    display: none;
+  }
 }
 
 .service-page .right-side .content h4 {

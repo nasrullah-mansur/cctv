@@ -1,4 +1,6 @@
 .header {
+    position: relative;
+
     .top {
         background-color: $primary-color;
         color: $white;
@@ -11,6 +13,7 @@
             li {
                 margin-right: 15px;
                 font-size: 15px;
+                text-align: center;
 
                 i {
                     padding-right: 6px;
@@ -20,6 +23,12 @@
                     color: $white;
                 }
             }
+
+            @media (max-width: 575px) {
+                justify-content: center;
+                text-align: center;
+            }
+
         }
     }
 
@@ -34,7 +43,40 @@
             }
         }
 
+        .mobile-menu {
+            width: 40px;
+            height: 40px;
+            border: 2px solid $secondary-color;
+            border-radius: 3px;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            margin-left: auto;
+            transition: $transition;
+
+            i {
+                font-size: 22px;
+                color: $secondary-color;
+                transition: $transition;
+            }
+
+            @media (max-width: 991.98px) {
+                display: flex;
+            }
+
+            &:hover,
+            &.active {
+                background-color: $secondary-color;
+                
+                i {
+                    color: $white;
+                }
+            }
+        }
+
         .list {
+
             ul {
                 display: flex;
 
@@ -56,6 +98,27 @@
                         a {
                             color: $secondary-color;
                         }
+                    }
+                }
+            }
+
+            @media (max-width: 991.98px) {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: $white;
+                z-index: 999;
+                padding-bottom: 20px;
+                border-top: 1px solid $secondary-color;
+
+                ul {
+                    flex-direction: column;
+
+                    li {
+                        text-align: center;
+                        border-bottom: 1px dashed $border-color;
                     }
                 }
             }

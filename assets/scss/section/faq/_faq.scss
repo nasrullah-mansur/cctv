@@ -55,5 +55,15 @@
                 }
             }
         }
+
+        @media (max-width: 991.98px) {
+            margin: 0;
+            flex-wrap: wrap;
+
+            li {
+                width: 100%;
+                padding: 0;
+            }
+        }
     }
 }

@@ -1,6 +1,10 @@
 // Contact us;
 .contact {
-    padding: 100px 0;
+    padding: 100px 0 70px;
+
+    [class^="col"] {
+        margin-bottom: 30px;
+    }
 
     .form {
         background-color: $bgOne;
@@ -23,6 +27,12 @@
                 padding: 10px 15px;
                 border: 0;
                 background-color: $white;
+            }
+
+            @media (max-width: 767.98px) {
+                input {
+                    width: 100%;
+                }
             }
             
         }

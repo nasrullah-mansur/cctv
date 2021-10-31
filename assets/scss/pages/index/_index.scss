@@ -39,6 +39,28 @@
                 max-height: 320px;
             }
         }
+
+        @media (max-width: 767.98px) {
+            h3 {
+                font-size: 42px;
+                line-height: 52px;
+            }
+        }
+
+        @media (max-width: 575.98px) {
+            h3 {
+                font-size: 28px;
+                line-height: 38px;
+            }
+
+            ul {
+                flex-direction: column;
+
+                li {
+                    margin-bottom: 20px;
+                }
+            }
+        }
     }
 
     .slick-arrow {
@@ -65,6 +87,10 @@
             border-color: transparent;
             background-color: $secondary-color;
             color: $white;
+        }
+
+        @media (max-width: 575.98px) {
+            display: none !important;
         }
     }
 
@@ -100,10 +126,13 @@
     padding-top: 100px;
     padding-bottom: 70px;
 
+    [class^="col"] {
+        margin-bottom: 30px;
+    }
+
     .how-work-item {
         position: relative;
         padding: 30px;
-        margin-bottom: 30px;
         border-radius: 10px;
         background-color: $primary-color;
         color: $white;
@@ -186,12 +215,4 @@
     }
 }
 
-// Call-to-action
-.call-to-action {
-    padding: 100px 0;
-    background-image: url(../images/serve-bg.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100% 100%;
-}
 
