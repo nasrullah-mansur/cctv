@@ -1,0 +1,93 @@
+.commercial {
+    padding: 100px 0 75px;
+
+    .item {
+        margin-bottom: 30px;
+
+        .img {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                transition: $transition;
+            }
+
+            .overlay {
+                position: absolute;
+                left: 20px;
+                bottom: 20px;
+                width: calc(100% - 40px);
+                z-index: 99;
+                background-color: $primary-color;
+                border-radius: 10px;
+                padding: 15px;
+                box-sizing: border-box;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                transition: $transition;
+
+                h3 {
+                    font-size: 24px;
+                    color: $white;
+                    font-weight: 600;
+                }
+
+                span {
+                    font-size: 14px;
+                    color: $white;
+                }
+
+                .icon {
+                    a {
+                        display: block;
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 5px;
+                        background-color: $white;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        transition: $transition;
+
+                        i {
+                            font-size: 24px;
+                            color: $black;
+                        }
+                    }
+                }
+            }
+        }
+
+        &:hover {
+            .img {
+                img {
+                    transform: scale(1.1);
+                }
+            }
+            .overlay {
+                background-color: $secondary-color;
+
+                .icon {
+                    a {
+                        background-color: $white;
+
+                        i {
+                            color: $black;
+                        }
+
+                        &:hover {
+                            background-color: $primary-color;
+
+                            i {
+                                color: $white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

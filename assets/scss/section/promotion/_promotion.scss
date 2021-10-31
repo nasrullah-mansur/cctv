@@ -1,0 +1,124 @@
+// Current promotion
+.current-promotion {
+    padding: 100px 0;
+
+    .slider {
+        margin: 0 -15px;
+
+        .col {
+            padding: 0 15px;
+        }
+    }
+
+    [class^="col"] {
+        margin-bottom: 30px;
+    }
+
+    .item {
+        background-color: $bgOne;
+        height: 100%;
+
+        .img {
+            position: relative;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                transition: $transition;
+            }
+
+            span {
+                display: block;
+                position: absolute;
+                left: 20px;
+                bottom: 20px;
+                height: 40px;
+                line-height: 40px;
+                font-family: $titleFont;
+                font-weight: 600;
+                text-transform: uppercase;
+                padding: 0 20px;
+                background-color: $secondary-color;
+                letter-spacing: 0.5px;
+                color: $white;
+                border-radius: 5px;
+                z-index: 9;
+            }
+        }
+
+        .text {
+            padding: 25px 15px;
+
+            h4 {
+                font-size: 24px;
+                font-weight: 600;
+                margin-bottom: 15px;
+
+                a {
+                    color: $black;
+                    transition: $transition;
+                }
+
+                &:hover {
+                    a {
+                        color: $secondary-color;
+                    }
+                }
+            }
+
+            p {
+                margin-bottom: 15px;
+            }
+
+            > a:not(.custom-btn) {
+                color: $hover-color;
+                font-weight: 600;
+
+                i {
+                    padding-left: 15px;
+                    transition: $transition;
+                }
+
+                &:hover {
+                    i {
+                        padding-left: 20px;
+                    }
+                }
+            }
+        }
+
+        &:hover {
+            .img {
+                img {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+
+    .slick-dots {
+        position: absolute;
+        left: 50%;
+        bottom: -30px;
+        transform: translateX(-50%);
+        z-index: 99;
+        display: flex;
+
+        li {
+            width: 15px;
+            height: 15px;
+            border: 2px solid $secondary-color;
+            border-radius: 50%;
+            margin: 0 4px;
+            cursor: pointer;
+
+            button {
+                display: none;
+            }
+
+            &.slick-active {
+                background-color: $secondary-color;
+            }
+        }
+    }
+}

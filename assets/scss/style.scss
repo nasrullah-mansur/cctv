@@ -30,6 +30,16 @@ Version: 1.0
 // component content
 @import "section/header/header";
 @import "section/footer/footer";
+@import "section/pricing/pricing";
+@import "section/testimonial/testimonial";
+@import "section/faq/faq";
+@import "section/contact/contact";
+@import "section/promotion/promotion";
+@import "section/pagebaner/pagebaner";
+@import "section/serve_button/serve";
+@import "section/commercial_section/commercial";
+@import "section/sub_contractor/subcontractor";
 
 // Pages;
 @import "pages/index/index";
+@import "pages/contact/contact";

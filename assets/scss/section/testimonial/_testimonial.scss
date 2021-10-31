@@ -1,0 +1,83 @@
+// Testimonial;
+.testimonial {
+    .testimonial-slide {
+        margin: 0 -15px;
+
+        .col {
+            padding: 0 15px;
+        }
+    }
+
+    .slick-dots {
+        position: absolute;
+        left: 50%;
+        bottom: -50px;
+        transform: translateX(-50%);
+        z-index: 99;
+        display: flex;
+
+        li {
+            width: 15px;
+            height: 15px;
+            border: 2px solid $secondary-color;
+            border-radius: 50%;
+            margin: 0 4px;
+            cursor: pointer;
+
+            button {
+                display: none;
+            }
+
+            &.slick-active {
+                background-color: $secondary-color;
+            }
+        }
+    }
+
+    .item {
+        background-color: $bgOne;
+        padding: 23px 25px 22px;
+        transition: $transition;
+
+        &:hover {
+            background-color: $secondary-color;
+        }
+
+        h5 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            font-weight: 600;
+            transition: $transition;
+        }
+
+        span {
+            display: block;
+            margin-bottom: 4px;
+            transition: $transition;
+        }
+
+        .ratting {
+            display: flex;
+
+            i {
+                color: $yellow;
+                font-size: 18px;
+            }
+        }
+
+        p {
+            margin-top: 20px;
+            margin-bottom: 0;
+            font-weight: 600;
+            transition: $transition;
+        }
+
+        &:hover {
+            h5,
+            span,
+            p {
+                color: $white;
+            }
+        }
+    }
+}

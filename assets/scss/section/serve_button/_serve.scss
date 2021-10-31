@@ -1,0 +1,25 @@
+// How serve
+.how-serve {
+    padding: 100px 0;
+    background-image: url(../images/serve-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+
+    .links {
+        ul {
+            display: flex;
+            justify-content: center;
+
+            li {
+                padding: 0 15px;
+
+                &.active {
+                    a {
+                        background-color: $secondary-color;
+                    }
+                }
+            }
+        }
+    }
+}
