@@ -1,0 +1,54 @@
+.footer {
+    padding: 100px 0 30px;
+    margin-top: 100px;
+    background-color: $primary-color;
+    color: $white;
+
+    .logo {
+        img {
+            max-width: 290px;
+        }
+
+        p {
+            margin-right: 30px;
+            margin-top: 15px;
+        }
+    }
+
+    h4 {
+        color: $white;
+        font-size: 22px;
+        margin-bottom: 20px;
+        font-weight: 600;
+    }
+
+    ul {
+        li {
+            margin-bottom: 15px;
+            position: relative;
+            padding-left: 25px;
+
+            i {
+                position: absolute;
+                top: 5px;
+                left: 0;
+            }
+
+            a {
+                color: $white;
+            }
+        }
+    }
+
+    .link {
+        ul {
+            li {
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    .copyright {
+        border-top: 1px solid $secondary-color;
+    }
+}
