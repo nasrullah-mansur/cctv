@@ -38,5 +38,10 @@ $(document).ready(function() {
             iTag.addClass('la-plus').removeClass('la-minus');
         }
         $(this).toggleClass('active');
-    })
+    });
+
+    if( $('.service-page').length > 0 ) {
+        $('.service-page .right-side .content ul li').prepend('<i class="las la-check-circle"></i>')
+    }
+
 });
